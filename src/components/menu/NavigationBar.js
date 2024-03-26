@@ -14,7 +14,8 @@ export const NavigationBar = () => {
                 <MenuLinks/>
             </Navbar.Section>
             <Navbar.Section>
-                <MenuLink icon={<IconLogout size="1rem"/>} color='gray' label='Logout' linkTo="/login" onClick={() => logout()}/>
+                <MenuLink icon={<IconLogout size="1rem"/>} color='gray' label='Logout' linkTo="/login"
+                          onClick={() => logout()}/>
                 <br/>
             </Navbar.Section>
         </Navbar>

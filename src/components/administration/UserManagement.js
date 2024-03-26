@@ -6,7 +6,6 @@ import {API_URL} from "../../consts";
 import {errorToast, successToast} from "../../helper";
 import {IconTrash} from "@tabler/icons-react";
 import useAxios from "axios-hooks";
-import {useEffect} from "react";
 import * as PropTypes from "prop-types";
 
 function Center(props) {

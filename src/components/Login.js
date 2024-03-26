@@ -1,5 +1,5 @@
 import {useForm} from "@mantine/form"
-import {Box, TextInput, Group, Button, Title} from "@mantine/core"
+import {Box, Button, Group, TextInput, Title} from "@mantine/core"
 import axios from "axios";
 import {API_URL} from "../consts";
 import {errorToast} from "../helper";
@@ -46,11 +46,13 @@ export const Login = () => {
             transform: "translateY(130%)"
         }}>
             <Title order={3}>Login to Domainizer</Title>
-            <TextInput label="Username" placeholder="Username" {...form.getInputProps('username')} onKeyUp={submitWithEnter}/>
-            <TextInput type="password" mt="md" label="Password" placeholder="Password" {...form.getInputProps('password')} onKeyUp={submitWithEnter}/>
+            <TextInput label="Username" placeholder="Username" {...form.getInputProps('username')}
+                       onKeyUp={submitWithEnter}/>
+            <TextInput type="password" mt="md" label="Password"
+                       placeholder="Password" {...form.getInputProps('password')} onKeyUp={submitWithEnter}/>
             <Group justify="center" mt="xl">
                 <Button onClick={submitLogin} fullWidth color="green">Login</Button>
             </Group>
         </Box>
-        </>
+    </>
 }

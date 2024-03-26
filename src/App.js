@@ -11,7 +11,7 @@ import {ModalsProvider} from "@mantine/modals";
 import {Dashboard} from "./components/Dashboard";
 import {ScanResults} from "./components/scan/ScanResults";
 import {ScanResultsList} from "./components/scan/ScanResultsList";
-import {VulnScanResultsList} from "./components/scan/VulnScanResultsList";
+import {VulnScans} from "./components/scan/VulnScans";
 import {VulnScanResultsOpenPortsList} from "./components/scan/VulnScanResultsOpenPortsList";
 import {VulnScanResultsSecurityIssuesList} from "./components/scan/VulnScanResultsSecurityIssuesList";
 import {UserManagement} from "./components/administration/UserManagement";
@@ -54,7 +54,7 @@ function App() {
                 },
                 {
                     path: "/scan/:scanId/resultsVuln/:runScanId/",
-                    element: <VulnScanResultsList/>
+                    element: <VulnScans/>
                 },
                 {
                     path: "/scan/:scanId/resultsVuln/:runScanId/:runVulnScanId/openPorts",

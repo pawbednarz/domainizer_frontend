@@ -93,7 +93,6 @@ export const ScanListTable = (props) => {
                             />
                         </Tooltip>
                     </td>
-                    {/*<td>Run, show result, show config, edit, delete</td>*/}
                 </tr>
             }) : ""}
             </tbody>
