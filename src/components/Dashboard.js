@@ -158,6 +158,14 @@ export const Dashboard = () => {
                                         <Text fz="lg" color="#e81546"><strong>NOT CONFIGURED</strong></Text>
                                 }
                             </Grid.Col>
+                            <Grid.Col span={6}><Text fz="lg">API Ninjas:</Text></Grid.Col>
+                            <Grid.Col span={6}>
+                                {
+                                    configData.apiNinjas ?
+                                        <Text fz="lg" color="#0d6913"><strong>CONFIGURED</strong></Text> :
+                                        <Text fz="lg" color="#e81546"><strong>NOT CONFIGURED</strong></Text>
+                                }
+                            </Grid.Col>
                         </Grid>
                     </Paper>
                 </Grid.Col>
