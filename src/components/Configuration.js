@@ -23,7 +23,8 @@ export const Configuration = () => {
             virusTotalKey: "",
             censysApiId: "",
             censysApiSecret: "",
-            shodanApiSecret: ""
+            shodanApiSecret: "",
+            apiNinjasKey: ""
         },
         validate: {}
     })
@@ -34,11 +35,11 @@ export const Configuration = () => {
             form.setFieldValue("censysApiId", data.censysApiId)
             form.setFieldValue("censysApiSecret", data.censysApiSecret)
             form.setFieldValue("shodanApiSecret", data.shodanApiSecret)
+            form.setFieldValue("apiNinjasKey", data.apiNinjasKey)
         }
     }, data)
 
     const submitForm = () => {
-        // TODO add check if scan exist - if yes ask if we should create a new one
         axios.post(
             API_URL + "/config",
             form.values,
@@ -76,6 +77,10 @@ export const Configuration = () => {
                         <TextInput
                             label="Shodan API key"
                             {...form.getInputProps('shodanApiSecret')}
+                        />
+                        <TextInput
+                            label="API Ninjas key (whois lookup)"
+                            {...form.getInputProps('apiNinjasKey')}
                         />
                         <Group position="left" mt="md">
                             <Button onClick={submitForm} color="green">Submit</Button>
